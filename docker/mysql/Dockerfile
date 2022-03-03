@@ -1,6 +1,6 @@
 FROM mysql:5.6
 
-ADD docker/mysql/movietheatredb.sql /docker-entrypoint-initdb.d
+ADD movietheatredb.sql /docker-entrypoint-initdb.d
 
 ENV MYSQL_DATABASE=movietheatredb \
     MYSQL_ROOT_PASSWORD=hahadude
