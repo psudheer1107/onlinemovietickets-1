@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+
+  php:
+    build: ./docker/php
+    depends_on:
+      - mysql-db
+    container_name: 'webapp_tickets1234'
+    ports:
+      - 3737:80
+
+  mysql-db:
+    build: ./docker/mysql
+    container_name: 'mysql-db'
+    expose:
+      - 3306
+    ports:
+      - 3306:3306
+    deploy:
+      restart_policy:
+        condition: any
+
