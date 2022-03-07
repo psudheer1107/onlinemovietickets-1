@@ -17,7 +17,7 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
-    - task: DockerCompose@@
+    - task: DockerCompose@0
       displayName: Build an image
       inputs:
         action: Build services
