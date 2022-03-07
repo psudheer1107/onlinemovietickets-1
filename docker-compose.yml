@@ -4,6 +4,7 @@ services:
 
   php:
     build: ./docker/php
+    image: sudheer1107/php:1.0
     depends_on:
       - mysql-db
     container_name: 'webapp_tickets1234'
@@ -12,6 +13,7 @@ services:
 
   mysql-db:
     build: ./docker/mysql
+    image: sudheer1107/mysql:1.0
     container_name: 'mysql-db'
     expose:
       - 3306
