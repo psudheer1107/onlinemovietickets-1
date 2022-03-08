@@ -23,12 +23,12 @@ stages:
         action: Build services
         #azureSubscriptionEndpoint: $(azureSubscriptionEndpoint)
         dockerComposeFile: docker-compose.yml
-        projectName: $(Build.Repository.Name)
-        additionalImageTags: $(Build.BuildId)
-    - task: DockerCompose@1
+        #        projectName: $(Build.Repository.Name)
+        #additionalImageTags: $(Build.BuildId)
+    - task: DockerCompose@0
       displayName: Push services
       inputs:
         action: Push services
         dockerComposeFile: docker-compose.yml
-        projectName: $(Build.Repository.Name)
-        additionalImageTags: $(Build.BuildId)
+        #        projectName: $(Build.Repository.Name)
+        #additionalImageTags: $(Build.BuildId)
