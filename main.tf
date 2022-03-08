@@ -23,10 +23,10 @@ terraform {
 }
 
 
-#variable "imagebuild" {
-#  type        = string
-#  description = "Latest Image Build"
-#}
+variable "imagebuild" {
+  type        = string
+  description = "Latest Image Build"
+}
 
 resource "azurerm_resource_group" "tf_test" {
   name = "tfmainrg"
@@ -44,7 +44,7 @@ resource "azurerm_container_group" "tfcg_test" {
 
   container {
       name            = "onlinemoviephp"
-      image           = "sudheer1107/php:2.0"
+      image           = "sudheer1107/mysql:2.0"
         cpu             = "1"
         memory          = "1"
 
@@ -55,7 +55,7 @@ resource "azurerm_container_group" "tfcg_test" {
   }
   container {
       name            = "onlinemoviemysql"
-      image           = "sudheer1107/mysql:2.0"
+      image           = "sudheer1107/php:2.0"
         cpu             = "1"
         memory          = "1"
 
