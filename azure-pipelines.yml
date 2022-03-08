@@ -29,6 +29,7 @@ stages:
       displayName: Push services
       inputs:
         action: Push services
+        containerRegistry: 'Sudheer docker'
         dockerComposeFile: docker-compose.yml
         #        projectName: $(Build.Repository.Name)
         #additionalImageTags: $(Build.BuildId)
